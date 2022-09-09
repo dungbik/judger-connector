@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'yooneeverse'
+group 'yoonleeverse'
 version '1.0-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -20,4 +20,13 @@ dependencies {
     implementation 'net.java.dev.jna:jna-platform:5.6.0'
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

@@ -1,4 +1,4 @@
-package yooneeverse;
+package yoonleeverse;
 
 import lombok.Builder;
 

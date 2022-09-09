@@ -1,4 +1,4 @@
-package yooneeverse;
+package yoonleeverse;
 
 import com.sun.jna.Structure;
 

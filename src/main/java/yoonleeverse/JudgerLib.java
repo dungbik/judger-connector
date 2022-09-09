@@ -1,9 +1,9 @@
-package yooneeverse;
+package yoonleeverse;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 
-import static yooneeverse.Constants.JUDGER_PATH;
+import static yoonleeverse.Constants.JUDGER_PATH;
 
 public interface JudgerLib extends Library {
     JudgerLib INSTANCE = Native.load(JUDGER_PATH, JudgerLib.class);
