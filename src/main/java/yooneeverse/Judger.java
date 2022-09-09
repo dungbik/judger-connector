@@ -26,8 +26,13 @@ public class Judger {
                 Object value = field.get(param);
                 if (value == null)
                     continue;
-
-                argvList.add(String.format("--%s=%s", field.getName(), value));
+                if (field.getType() == List.class) {
+                    for (String str : (List<String>) value) {
+                        argvList.add(String.format("--%s='%s'", field.getName(), str));
+                    }
+                } else {
+                    argvList.add(String.format("--%s=%s", field.getName(), value));
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
