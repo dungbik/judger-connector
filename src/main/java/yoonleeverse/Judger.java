@@ -28,7 +28,7 @@ public class Judger {
                     continue;
                 if (field.getType() == List.class) {
                     for (String str : (List<String>) value) {
-                        argvList.add(String.format("--%s='%s'", field.getName(), str));
+                        argvList.add(String.format("--%s=%s", field.getName(), str));
                     }
                 } else {
                     argvList.add(String.format("--%s=%s", field.getName(), value));
