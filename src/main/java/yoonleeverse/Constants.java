@@ -15,7 +15,8 @@ public class Constants {
         SYSTEM_ERROR(5),
         INIT_EVN_ERROR(6),
         COMPILE_ERROR(7),
-        UNK_ERROR(8)
+        JUDGE_ERROR(8),
+        UNK_ERROR(100)
         ;
 
         @Getter
